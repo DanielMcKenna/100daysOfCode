@@ -1,3 +1,11 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --light-blue: rgb(70, 160, 184);
+  --black: #1c2b2d;
+  --blue: rgb(43, 98, 135);
+  --green: rgb(150, 242, 124);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +16,14 @@ html {
   font-size: 10px;
 }
 
+body {
+  background-color: rgb(43, 98, 135);
+}
+
+nav {
+  padding: 0;
+  margin: 0;
+}
 p {
   font-size: 1.6rem;
   line-height: 1.5;
@@ -21,4 +37,56 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.counter-div {
+  width: 40rem;
+  border: 1px solid var(--green);
+  padding: 1rem;
+  background-color: var(--light-blue);
+  color: var(--green);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.counter-div hr {
+  border: solid var(--green) 1px;
+}
+
+/* this targets all the children in the div */
+.counter-div > * {
+  margin-bottom: 2rem;
+}
+
+.count {
+  font-size: 4rem;
+  color: white;
+}
+.buttons button {
+  padding: 1rem;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: rgb(70, 160, 184);
+  font-weight: 700;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+
+button.subtract:hover {
+  color: var(--green);
+  background-color: var(--blue);
+}
+
+button.reset:hover {
+  color: var(--white);
+  background-color: var(--blue);
+}
+button.addition:hover {
+  color: var(--light-blue);
+  background-color: var(--blue);
 }
