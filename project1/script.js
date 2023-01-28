@@ -1,10 +1,16 @@
 // this is away you can create an event listener for each item
 
+// variables for the counter app
 let count = document.querySelector(".count");
-let subtractCount = document.querySelector(".subtract");
 let buttons = document.querySelector(".buttons");
+// let subtractCount = document.querySelector(".subtract");
 // let addCount = document.querySelector(".addition");
 // let resetCount = document.querySelector(".reset");
+
+// variables for random number app
+let randomCount = document.querySelector(".random-count");
+// let randomButton = document.querySelector(".random-num");
+let randomButtons = document.querySelector(".random-buttons");
 
 // addCount.addEventListener("click", () => {
 //   count.innerHTML++;
@@ -30,6 +36,14 @@ buttons.addEventListener("click", (e) => {
   } else {
     count.innerHTML = 0;
     setColor();
+  }
+});
+
+randomButtons.addEventListener("click", (e) => {
+  if (e.target.classList.contains("random-num")) {
+    randomCount.innerHTML = Math.floor(Math.random() * 100) + 1;
+  } else {
+    randomCount.innerHTML = 0;
   }
 });
 
