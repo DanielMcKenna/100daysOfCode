@@ -71,6 +71,11 @@ img {
   font-size: 4rem;
   color: white;
 }
+
+.random-hex-value {
+  color: white;
+}
+
 .buttons button {
   padding: 1rem;
   margin: 0 1rem;

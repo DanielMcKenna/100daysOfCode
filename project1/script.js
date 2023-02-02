@@ -12,6 +12,10 @@ let randomCount = document.querySelector(".random-count");
 // let randomButton = document.querySelector(".random-num");
 let randomButtons = document.querySelector(".random-buttons");
 
+// variables for random hex card
+let randomHexValue = document.querySelector(".random-hex-value");
+let randomHexButtons = document.querySelector(".random-hex-buttons");
+
 // addCount.addEventListener("click", () => {
 //   count.innerHTML++;
 // });
@@ -47,6 +51,17 @@ randomButtons.addEventListener("click", (e) => {
   }
 });
 
+randomHexButtons.addEventListener("click", (e) => {
+  if (e.target.classList.contains("random-hex")) {
+    randomHexValue.innerHTML =
+      "#" + Math.floor(Math.random() * 16777215).toString(16);
+    hexColor();
+  } else if (e.target.classList.contains("hex-reset")) {
+    randomHexValue.innerHTML = "#ffffff";
+    hexColor();
+  }
+});
+
 //color
 
 let setColor = () => {
@@ -56,5 +71,13 @@ let setColor = () => {
     count.style.color = "var(--blue)";
   } else {
     count.style.color = "white";
+  }
+};
+
+let hexColor = () => {
+  if (randomHexValue.innerHTML !== "#ffffff") {
+    randomHexValue.style.color = `${randomHexValue.innerHTML}`;
+  } else {
+    randomHexValue.style.color = "white";
   }
 };
