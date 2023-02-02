@@ -19,3 +19,5 @@ setColor();
 });
 
 The issue I ran into here was even when I added an elseif targeting the reset button and to change the randomCount number it would not register so I ended up giving new classes created a new set of buttons. not sure why it wouldnt work though because the random numbers do have a buttons class.
+
+Day3 - I did a random hex generator. Issues I ran into was leaving out the # so I couldnt figure out why the color value was not changing to the hex value for about 20min until I realized it was taking the string value and not the #. So on my hexColor function I added a # to the value. everything worked great.Then I realized the UI on the HTML didnt show a # so I added one there and everything broke. it took me about 5 min more than I want to admit that Iwas then having 2 # causing the issue to break. but figured it out and now everything is working.
